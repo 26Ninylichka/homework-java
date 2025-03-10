@@ -1,0 +1,83 @@
+package gmail.smoljarn.lesson14;
+
+import gmail.smoljarn.lesson14.animals.Dragon;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Dragon dragon1 = new Dragon();
+        dragon1.setName("Astor");
+        dragon1.setAge(5);
+        dragon1.setWeight(10);
+
+        System.out.println(dragon1.getName());
+        System.out.println(dragon1.getAge());
+        System.out.println(dragon1.getWeight());
+
+
+        System.out.println("New dragon " + "\n");
+
+
+        Dragon dragon2 = new Dragon("Viking", 2, 5);
+
+
+        System.out.println(dragon2.getName());
+        System.out.println(dragon2.getAge());
+        System.out.println(dragon2.getWeight());
+
+
+        Scanner scan = new Scanner(System.in);
+        Dragon[] dragons = new Dragon[3];
+
+        for (int i = 0; i < dragons.length; i++) {
+
+
+            System.out.println("\nВведіть дані для дракона ");
+
+
+            System.out.print("Введіть  імя дракона: ");
+            String name = scan.nextLine();
+
+
+            System.out.print("Введіть вік дракона: ");
+            int age = scan.nextInt();
+
+            System.out.println("Введіть вагу дракона");
+            double weight = scan.nextDouble();
+
+            scan.nextLine();
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}
