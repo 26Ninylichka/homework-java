@@ -20,12 +20,13 @@ public class Main {
         System.out.println("New dragon " + "\n");
 
 
-        Dragon dragon2 = new Dragon("Viking", 2, 5);
+        Dragon dragon2 = new Dragon("Viking", 2, 5, "Я тебе зажарю: fire");
 
 
         System.out.println(dragon2.getName());
         System.out.println(dragon2.getAge());
         System.out.println(dragon2.getWeight());
+        System.out.println(dragon2.getVoice());
 
 
         Scanner scan = new Scanner(System.in);
@@ -50,6 +51,7 @@ public class Main {
             scan.nextLine();
 
         }
+
 
 
 
