@@ -1,5 +1,6 @@
 package gmail.smoljarn.lesson14;
 
+import gmail.smoljarn.lesson14.animals.Breed;
 import gmail.smoljarn.lesson14.animals.Dragon;
 
 import java.util.Scanner;
@@ -31,6 +32,10 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
         Dragon[] dragons = new Dragon[3];
+        System.out.println("Вибери породу дракона");
+        String breedString = scan.nextLine();
+        Breed breed = Breed.valueOf(breedString);
+
 
         for (int i = 0; i < dragons.length; i++) {
 
@@ -51,35 +56,6 @@ public class Main {
             scan.nextLine();
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }

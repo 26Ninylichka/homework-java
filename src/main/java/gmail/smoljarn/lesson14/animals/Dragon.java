@@ -6,6 +6,7 @@ public  class Dragon {
     private int age;
     private double weight;
     private String voice;
+    private Breed breed;
 
 
     @Override
@@ -28,6 +29,7 @@ public  class Dragon {
         this.age = age;
         this.weight = weight;
         this.voice = voice;
+        this.breed = breed;
     }
 
 
@@ -47,7 +49,6 @@ public  class Dragon {
         return age;
     }
 
-
     public void setWeight(double weight) {
         this.weight = weight;
     }
@@ -57,6 +58,12 @@ public  class Dragon {
 
     }
 
+    public void setBreed(Breed breed) {
+        this.breed = breed;
+    }
+    public Breed getBreed() {
+        return breed;
+    }
 
     public void setVoice(String voice) {
         this.voice = voice;
