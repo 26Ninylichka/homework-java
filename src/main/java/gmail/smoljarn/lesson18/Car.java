@@ -1,5 +1,4 @@
 package gmail.smoljarn.lesson18;
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,8 +6,6 @@ import java.time.LocalDate;
 
 @Setter
 @Getter
-
-
 public class Car {
 
     public double fuelLevel;
@@ -29,8 +26,5 @@ public class Car {
     }
     public double maxDistance() {
         return (fuelLevel / fuelConsumption) * 100;
-    }
-    public double getFuelLevel() {
-        return fuelLevel;
     }
 }
