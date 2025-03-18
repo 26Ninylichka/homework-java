@@ -7,7 +7,6 @@ import java.time.LocalDate;
 @Setter
 @Getter
 public class Car {
-
     public double fuelLevel;
     public double fuelConsumption;
     public LocalDate nextTuv;
