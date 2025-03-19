@@ -1,11 +1,5 @@
 package gmail.smoljarn.lesson14.animals;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Setter
-@Getter
-
 public  class Dragon {
 
     private String name;
@@ -29,7 +23,7 @@ public  class Dragon {
         System.out.println("Dragon Constructor called");
     }
 
-    public Dragon(String name, int age, double weight, String voice) {
+    public Dragon(String name, int age, double weight, String voice){
         System.out.println("Dragon Constructor WITH PARAMETERS called");
         this.name = name;
         this.age = age;
@@ -37,11 +31,46 @@ public  class Dragon {
         this.voice = voice;
         this.breed = breed;
     }
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public double getWeight() {
+        return weight;
+
+    }
+
+    public void setBreed(Breed breed) {
+        this.breed = breed;
+    }
+    public Breed getBreed() {
+        return breed;
+    }
+
+    public void setVoice(String voice) {
+        this.voice = voice;
+    }
+    public String getVoice() {
+        return voice;
+    }
 }
-
-
-
-
-
 
 
