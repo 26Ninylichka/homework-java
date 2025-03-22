@@ -10,5 +10,6 @@ public class Main {
         System.out.println("Машина може їхати: " + bmw530d.canDrive());
         System.out.println("Машина допущена до експлуатації: " + bmw530d.isAllowedToDrive());
         System.out.println("Максимальна дистанція: " + bmw530d.maxDistance() + " км");
+
     }
 }
