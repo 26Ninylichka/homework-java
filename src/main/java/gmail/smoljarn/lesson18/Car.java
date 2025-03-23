@@ -1,6 +1,7 @@
 package gmail.smoljarn.lesson18;
 import java.time.LocalDate;
-public class Car {
+  public class Car {
+
     public double fuelLevel;
     public double fuelConsumption;
     public LocalDate nextTuv;
@@ -12,7 +13,6 @@ public class Car {
     public void setFuelConsumption(double fuelConsumption) {
         this.fuelConsumption = fuelConsumption;
     }
-
     public double getFuelLevel() {
         return fuelLevel;
     }
@@ -25,9 +25,7 @@ public class Car {
         this.fuelLevel = fuelLevel;
         this.fuelConsumption = fuelConsumption;
         this.nextTuv = nextTuv;
-
     }
-
     public boolean canDrive(){
         return fuelLevel > 0;
     }
