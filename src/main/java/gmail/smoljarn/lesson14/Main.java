@@ -17,6 +17,9 @@ public class Main {
         System.out.println(dragon1.getAge());
         System.out.println(dragon1.getWeight());
 
+        Dragon sunny = new Dragon("Sunny", 4, 4.5, Breed.ALPHAS.name());
+        Dragon danny = new Dragon("Danny", 5, 5.6, Breed.MOONDRAGON.name());
+        System.out.println(sunny.equals(danny));
 
         System.out.println("New dragon " + "\n");
 
@@ -56,6 +59,5 @@ public class Main {
             scan.nextLine();
 
         }
-
     }
 }
