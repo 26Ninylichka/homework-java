@@ -17,14 +17,14 @@ public class Main {
         System.out.println(dragon1.getAge());
         System.out.println(dragon1.getWeight());
 
-        Dragon sunny = new Dragon("Sunny", 4, 4.5, Breed.ALPHAS.name());
-        Dragon danny = new Dragon("Danny", 5, 5.6, Breed.MOONDRAGON.name());
+        Dragon sunny = new Dragon("Sunny", 4, 4.5, "Voice-0", Breed.ALPHAS);
+        Dragon danny = new Dragon("Danny", 5, 5.6,"Voice-1", Breed.MOONDRAGON);
         System.out.println(sunny.equals(danny));
 
         System.out.println("New dragon " + "\n");
 
 
-        Dragon dragon2 = new Dragon("Viking", 2, 5, "Я тебе зажарю: fire");
+        Dragon dragon2 = new Dragon("Viking", 2, 5, "Я тебе зажарю: fire", Breed.ALPHAS);
 
 
         System.out.println(dragon2.getName());

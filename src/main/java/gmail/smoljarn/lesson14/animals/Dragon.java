@@ -37,7 +37,7 @@ public class Dragon {
         System.out.println("Dragon Constructor called");
     }
 
-    public Dragon(String name, int age, double weight, String voice) {
+    public Dragon(String name, int age, double weight, String voice, Breed breed) {
         System.out.println("Dragon Constructor WITH PARAMETERS called");
         this.name = name;
         this.age = age;
