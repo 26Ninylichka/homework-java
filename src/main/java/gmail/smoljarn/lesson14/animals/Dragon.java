@@ -1,6 +1,8 @@
 package gmail.smoljarn.lesson14.animals;
 
-public  class Dragon {
+import java.util.Objects;
+
+public class Dragon {
 
     private String name;
     private int age;
@@ -19,11 +21,23 @@ public  class Dragon {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Dragon dragon = (Dragon) o;
+        return age == dragon.age && Double.compare(weight, dragon.weight) == 0 && breed == dragon.breed;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(age, weight, breed);
+    }
+
     public Dragon() {
         System.out.println("Dragon Constructor called");
     }
 
-    public Dragon(String name, int age, double weight, String voice){
+    public Dragon(String name, int age, double weight, String voice, Breed breed) {
         System.out.println("Dragon Constructor WITH PARAMETERS called");
         this.name = name;
         this.age = age;
@@ -61,6 +75,7 @@ public  class Dragon {
     public void setBreed(Breed breed) {
         this.breed = breed;
     }
+
     public Breed getBreed() {
         return breed;
     }
@@ -68,6 +83,7 @@ public  class Dragon {
     public void setVoice(String voice) {
         this.voice = voice;
     }
+
     public String getVoice() {
         return voice;
     }
