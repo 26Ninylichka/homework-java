@@ -13,12 +13,7 @@ public class Dragon {
 
     @Override
     public String toString() {
-        return "Dragon{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", weight=" + weight +
-                ", voice='" + voice + '\'' +
-                '}';
+        return "Dragon{" + "name='" + name + '\'' + ", age=" + age + ", weight=" + weight + ", voice='" + voice + '\'' + '}';
     }
 
     @Override
