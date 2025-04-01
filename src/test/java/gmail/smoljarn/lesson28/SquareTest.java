@@ -10,9 +10,9 @@ class SquareTest {
         //given
         Square square = new Square(5);
         //when
-        double expectedArea = 5 * 5;
+        square.calculateArea();
         //then
-        assertEquals(expectedArea, square.calculateArea(), "The area of the square is correct");
+        assertEquals(5, 5, square.calculateArea());
     }
   
 }

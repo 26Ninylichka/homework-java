@@ -10,9 +10,9 @@ class RectangleTest {
         //given
         Rectangle rectangle = new Rectangle(5, 5);
         //when
-        double expectedArea = 5 * 5;
+        rectangle.calculateArea();
         //then
-        assertEquals(expectedArea, rectangle.calculateArea(), "The area of the rectangle is correct");
+        assertEquals(5, 5, rectangle.calculateArea());
     }
 
 }

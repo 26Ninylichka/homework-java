@@ -1,7 +1,7 @@
 package gmail.smoljarn.lesson28;
 
 public class Rectangle extends Shape {
-    double width;
+   private double width;
     double height;
 
     public Rectangle(double width, double height) {
