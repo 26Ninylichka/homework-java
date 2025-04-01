@@ -1,11 +1,15 @@
 package gmail.smoljarn.lesson28;
 
-public class Shape {
+abstract class Shape {
 
-    public double calculateArea() {
-      return 0;
-  }
+    abstract double calculateArea();
+
+    abstract double calculatePerimeter();
+
+
     void displayInfo() {
-        System.out.println("This is abstract Shape");
+        System.out.println("Площа: " + calculateArea());
+        System.out.println("Периметр: " + calculatePerimeter());
     }
 }
+

@@ -8,11 +8,13 @@ class RectangleTest {
     @Test
     void shouldDoRectangleArea() {
         //given
-        Rectangle rectangle = new Rectangle(5, 5);
+        Shape shape = new Rectangle(5, 5);
         //when
-        rectangle.calculateArea();
+        shape.calculateArea();
+        shape.calculatePerimeter();
         //then
-        assertEquals(5, 5, rectangle.calculateArea());
+        assertEquals(5, 5, shape.calculateArea(),"Ales gut))");
+        assertEquals(5, 5, shape.calculatePerimeter(), "Ales gut))");
     }
 
 }

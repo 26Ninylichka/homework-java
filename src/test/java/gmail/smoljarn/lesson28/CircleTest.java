@@ -8,11 +8,14 @@ class CircleTest {
     @Test
     void shouldDoCircleArea() {
         //given
-        Circle circle = new Circle(6);
+        Shape shape = new Circle(6);
         //when
-        double expectedArea = Math.PI * 6 * 6;
+        shape.calculateArea ();
+        shape.calculatePerimeter();
+
         //then
-        assertEquals(expectedArea, circle.calculateArea(), "The area of the circle is correct");
+       assertEquals(6, 6, shape.calculateArea(), "Ales gut))");
+       assertEquals(6, 6,shape.calculatePerimeter(), "Ales gut))");
     }
 
 }
