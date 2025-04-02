@@ -8,11 +8,13 @@ class SquareTest {
     @Test
     void shouldDoSquareArea() {
         //given
-        Square square = new Square(5);
+        Shape shape = new Square(5);
         //when
-        square.calculateArea();
+        shape.calculateArea();
+        shape.calculatePerimeter();
         //then
-        assertEquals(5, 5, square.calculateArea());
+        assertEquals(5, 5,  shape.calculateArea());
+        assertEquals(5, 5, shape.calculatePerimeter());
     }
   
 }
