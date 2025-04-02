@@ -13,8 +13,8 @@ class RectangleTest {
         shape.calculateArea();
         shape.calculatePerimeter();
         //then
-        assertEquals(5, 5, shape.calculateArea(),"Ales gut))");
-        assertEquals(5, 5, shape.calculatePerimeter(), "Ales gut))");
+        assertEquals(25, shape.calculateArea());
+        assertEquals(40, shape.calculatePerimeter());
     }
 
 }

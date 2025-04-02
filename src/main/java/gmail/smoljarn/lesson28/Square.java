@@ -1,14 +1,22 @@
 package gmail.smoljarn.lesson28;
 
   public class Square extends Rectangle {
+
       private double side;
 
       public Square (double side) {
-          super(side, side);
+          super(side,side);
           this.side = side;
       }
+
+      @Override
+      public double calculateArea() {
+          return super.calculateArea();
+      }
+
+      @Override
       public double calculatePerimeter() {
-          return 5 * side;
+          return 4 * side;
       }
 
       @Override
