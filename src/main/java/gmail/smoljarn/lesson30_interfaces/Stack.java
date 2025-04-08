@@ -20,29 +20,26 @@ public class Stack implements Stackable {
     }
 
     @Override
-    public void push(int value) {
-        if (isFull()){
-            System.out.println("Помилка: стек повний");
-            return;
+    public void push(int value) throws StackIsFullException {
+        if (isFull()) {
+           throw new StackIsFullException("Помилка: стек повний");
         }
         stack[++top] = value;
         System.out.println("Додано: " + value);
     }
 
     @Override
-    public int pop() {
+    public int pop() throws StackIsEmptyException {
         if (isEmpty()) {
-            System.out.println("Помилка: стек пустий! Повертаю " + Integer.MIN_VALUE);
-            return Integer.MIN_VALUE;
+            throw new StackIsEmptyException("Помилка: стек пустий!");
         }
         return stack[top--];
     }
 
     @Override
-    public int peek() {
+    public int peek() throws StackIsEmptyException {
         if (isEmpty()) {
-            System.out.println("Помилка: стек пустий! Повертаю " + Integer.MIN_VALUE);
-            return  Integer.MIN_VALUE;
+            throw new StackIsEmptyException("Помилка: стек пустий!");
         }
         return stack[top];
     }
