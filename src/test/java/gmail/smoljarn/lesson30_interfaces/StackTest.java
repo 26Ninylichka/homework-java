@@ -2,6 +2,8 @@ package gmail.smoljarn.lesson30_interfaces;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class StackTest {
@@ -44,6 +46,18 @@ class StackTest {
         Stack stack = new Stack(4);
         // when + then
         assertThrows(StackIsEmptyException.class, () -> stack.peek());
+    }
+
+    @Test
+    void shouldSafePopReturnElement() throws StackIsFullException {
+        //given
+        Stack stack = new Stack(5);
+        stack.push(10);
+        //when
+        Optional<Integer> result = stack.safePop();
+        //then
+        assertTrue(result.isPresent());
+        assertEquals(10, result.get());
     }
 
 }

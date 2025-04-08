@@ -1,5 +1,7 @@
 package gmail.smoljarn.lesson30_interfaces;
 
+import java.util.Optional;
+
 public class Stack implements Stackable {
     private int[] stack;
     private int top;
@@ -42,5 +44,12 @@ public class Stack implements Stackable {
             throw new StackIsEmptyException("Помилка: стек пустий!");
         }
         return stack[top];
+    }
+    @Override
+    public Optional<Integer> safePop() {
+        if (isEmpty()) {
+            return Optional.empty();
+        }
+        return Optional.of(stack[top--]);
     }
 }
