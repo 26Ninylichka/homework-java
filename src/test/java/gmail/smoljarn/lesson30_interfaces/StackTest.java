@@ -60,4 +60,13 @@ class StackTest {
         assertEquals(10, result.get());
     }
 
+    @Test
+    void shouldReturnEmptyOptionalWhenSafePopFromEmptyStack() {
+        Stack stack = new Stack(6);
+       //when
+        Optional<Integer> result = stack.safePop();
+       //then
+        assertTrue(result.isEmpty());
+    }
+
 }
