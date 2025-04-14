@@ -8,31 +8,36 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class NumberUtilsTest {
     @Test
-    void  schoulDoGetSumNumbersTyList() {
+    void schoulGetSumNumbersTyList() {
         //given
         List<Number> numbers = List.of(1, 2, 3, 4, 5, 6, 7);
+        double expectedSum = 28;
         //when
-        int expectedSum = 28;
+        double actualSum = NumberUtils.getSum(numbers);
         //then
-        assertEquals(28, 28, NumberUtils.getSum(numbers));
+        assertEquals(expectedSum, actualSum);
     }
     @Test
-    void schoulDoMultiplyOddNumber(){
+    void schoulMultiplyOddNumber(){
         //given
-        List<Number> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8);
+        List<Number> numbers = List.of(1, 2, 3, 4, 5, 6, 7);
+        List<Long> expected = List.of(2l, 6l, 10l, 14l);
         //when
-        List<Integer> expected = List.of(2, 6, 10, 14);
+        List<Long> actual = NumberUtils.multiplyOddNumber(numbers);
         //Then
-        assertEquals(expected, NumberUtils.multiplyOddNumber(numbers));
+        assertEquals(expected, actual);
     }
     @Test
-    void schouldDoMultiplyOddNumberWithNoAdds() {
+    void schouldMultiplyOddNumberWithNoAdds() {
         //given
-        List<Number> numbers = List.of( 2, 4, 6, 8);
-        //when
+        List<Number> numbers = List.of(2, 4, 6, 8);
         List<Integer> expected = List.of();
+
+        //when
+        List<Long> actual = NumberUtils.multiplyOddNumber(numbers);
+
         //then
-        assertEquals(expected, NumberUtils.multiplyOddNumber(numbers));
+        assertEquals(expected, actual);
     }
 
 }
