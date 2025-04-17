@@ -1,15 +1,24 @@
 package gmail.smoljarn.lesson38_generic;
+import java.util.*;
 
-import java.util.List;
-import java.util.Map;
+import static gmail.smoljarn.lesson38_generic.FirstNumbers.getFirstNumbers;
+import static gmail.smoljarn.lesson38_generic.Maps.mergeMaps;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> List = java.util.List.of(1, 2, 4, 3, 1);
-        System.out.println(DementorUtils.getUniquePreservingOrder(List));
 
-        Map<String, Integer> map1 = Map.of("n", 2, "m", 3);
-        Map<String, Integer> map2 = Map.of("b", 4, "c", 5);
-        System.out.println(DementorUtils.mergeMaps(map1, map2));
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 2, 1, 4);
+        System.out.println(getFirstNumbers(numbers));
+
+        Map<String, Integer> map1 = new HashMap<>();
+        map1.put("яблоко", 2);
+        map1.put("вишня", 5);
+
+        Map<String, Integer> map2 = new HashMap<>();
+        map2.put("вишня",5);
+        map2.put("арбуз",1);
+
+        Map<String, Integer> result = mergeMaps(map1, map2);
+        System.out.println(result);
     }
 }
